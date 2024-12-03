@@ -259,9 +259,9 @@ const randomRoom = (length) => {
 // Handle API requests
 
 // Start server
-const PORT = process.env.PORT || 4000;
-server.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+const port = process.env.PORT || 4000;
+server.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });
 
 
