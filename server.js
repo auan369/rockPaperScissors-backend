@@ -297,7 +297,7 @@ const clearOldRooms = async () => {
     try {
         // Delete rooms that haven't been updated in the last 1 hour
         const dataOld = new Date(dataNow - 60 * 60 * 1000);
-        await Room.deleteMany({ lastUpdated: { $lt: dataOld } });
+        await Room.deleteMany({ createdAt: { $lt: dataOld } });
         console.log('Cleared old rooms');
     } catch (err) {
         console.error('Error clearing old rooms:', err);
